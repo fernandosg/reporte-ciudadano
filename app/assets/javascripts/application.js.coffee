@@ -1,8 +1,7 @@
 #= require jquery
 #= require jquery_ujs
 #= require jquery_nested_form
-#= require jquery-ui/datepicker
-#= require jquery-ui/sortable
+#= require jquery-ui.min.js
 #= require jquery.timeago
 #= require jquery-timeago/locales/jquery.timeago.es
 #= require jquery-fileupload/basic

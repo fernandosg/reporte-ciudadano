@@ -1,7 +1,6 @@
 require 'api_constraints'
-
 Rails.application.routes.draw do
-
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :admins, controllers: { sessions: 'admins/sessions', passwords: 'admins/passwords' }
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", registrations: 'users/registrations' }
   devise_scope :user do
@@ -82,6 +81,5 @@ Rails.application.routes.draw do
     scope module: :v1, constraints: ApiConstraints.new(version: 1, default: true) do
       resources :requests, as: :service_requests, controller: :service_requests, only: [:show, :index]
     end
-  end
-
+end
 end

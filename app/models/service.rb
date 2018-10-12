@@ -6,7 +6,7 @@ class Service < ActiveRecord::Base
 
   has_many :service_fields
   has_many :messages
-  belongs_to :service_admin, class: Admin, foreign_key: :service_admin_id
+  belongs_to :service_admin, class_name: Admin, foreign_key: :service_admin_id
   has_and_belongs_to_many :admins
 
   accepts_nested_attributes_for :service_fields, allow_destroy: true

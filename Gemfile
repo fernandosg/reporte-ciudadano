@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.5.1'
 
-gem 'rails', '4.2.0'
+gem 'rails', '>= 5.0.0.rc2', '< 5.1'
 
-gem 'pg'
+gem 'sprockets-rails'
+gem 'pg', '~> 0.18'
 gem 'devise'
 gem 'nested_form'
 gem 'geocoder'
